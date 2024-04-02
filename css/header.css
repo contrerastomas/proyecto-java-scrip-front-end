@@ -1,0 +1,37 @@
+header {
+  height: 5rem;
+}
+header nav {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 3rem;
+}
+header nav a {
+  border: 1px solid;
+  font-size: 2rem;
+  padding: 1rem;
+  color: black;
+}
+header nav a:hover {
+  transform: scale(1.05);
+}
+header nav button {
+  border: 1px solid;
+  font-size: 2rem;
+  padding: 1rem;
+  color: black;
+  background-color: transparent;
+  cursor: pointer;
+}
+header nav button:hover {
+  transform: scale(1.05);
+}
+header nav h1 {
+  font-size: 3rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/*# sourceMappingURL=header.css.map */

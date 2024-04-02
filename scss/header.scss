@@ -1,0 +1,38 @@
+header {
+
+    height: 5rem;
+
+
+    nav {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 5rem;
+        margin-top: 3rem ;
+        a{
+            border: 1px solid;
+            font-size: 2rem;
+            padding: 1rem;
+            color: black;
+            &:hover{
+                transform: scale(1.05);
+            }
+        }
+        button{
+            border: 1px solid;
+            font-size: 2rem;
+            padding: 1rem;
+            color: black;
+            background-color: transparent;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.05);
+            }
+        }
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            text-transform: capitalize;
+        }
+    }
+}

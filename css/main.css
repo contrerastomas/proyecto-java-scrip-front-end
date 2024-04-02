@@ -1,0 +1,132 @@
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 3rem;
+  margin-top: 6rem;
+  justify-content: center;
+  height: max-content;
+}
+main .datos .card {
+  width: max-content;
+  height: max-content;
+}
+main .datos .card form {
+  gap: 2rem;
+  border: solid 3px black;
+  width: 30rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .datos .card form label {
+  font-size: 1.8rem;
+  color: rgb(9, 9, 9);
+  border-bottom: solid 3px black;
+}
+main .datos .card form input {
+  width: 20rem;
+  height: 3rem;
+  font-size: 1.3rem;
+}
+main .datos .card form input::placeholder {
+  font-size: 1rem;
+  background-color: rgb(166, 186, 36);
+  text-align: center;
+}
+main .datos .card form button {
+  background-color: rgb(166, 186, 36);
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+}
+main .datos .card form button:hover {
+  transform: scale(1.09);
+}
+main .datos .card form input {
+  width: 15rem;
+  background: transparent;
+  height: 2rem;
+  cursor: pointer;
+}
+main .datos .card form input:hover {
+  background-color: rgb(166, 186, 36);
+}
+main .datos .card form input:focus {
+  transform: scale(1.1);
+}
+main .preguntas {
+  width: 30rem;
+  height: 30rem;
+  border: solid 3px black;
+}
+main .preguntas div {
+  width: 30rem;
+  height: 30rem;
+}
+main .preguntas div h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  border: solid 3px black;
+}
+main .preguntas div .anclas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+main .preguntas div .anclas a {
+  width: 15rem;
+  height: 3rem;
+  border: solid 3px black;
+  font-size: 1.4rem;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  padding-top: 0.5rem;
+}
+main .preguntas div .anclas a:hover {
+  background-color: rgb(166, 186, 36);
+  font-size: 1.6rem;
+}
+main .contenedorPreguntas {
+  width: 35rem;
+  height: 35rem;
+  border: 3px solid black;
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  justify-content: start;
+}
+main .contenedorPreguntas h2 {
+  margin-top: 1rem;
+}
+main .contenedorPreguntas div {
+  display: flex;
+  gap: 1.3rem;
+  flex-direction: column;
+}
+main .contenedorPreguntas div div {
+  display: flex;
+  align-items: center;
+}
+main .contenedorPreguntas div div label {
+  font-size: 1.3rem;
+  border-bottom: 3px solid rgb(166, 186, 36);
+}
+main .contenedorPreguntas div div input {
+  width: 20rem;
+  height: 2rem;
+  font-size: 1rem;
+}
+main .contenedorPreguntas div div input:hover {
+  background-color: rgb(166, 186, 36);
+}
+main .contenedorPreguntas div div button {
+  font-size: 1.5rem;
+  padding: 0.6rem;
+}
+
+/*# sourceMappingURL=main.css.map */
