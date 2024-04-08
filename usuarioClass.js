@@ -5,8 +5,9 @@ class Usuario {
      * @param {string} NombreUsuario solicita el nombre de usuario
      */
 
-    constructor(NombreUsuario) {
+    constructor(NombreUsuario,color) {
         this.NombreUsuario = NombreUsuario,
+        this.color=color,
             this.Score = 0
     }
 

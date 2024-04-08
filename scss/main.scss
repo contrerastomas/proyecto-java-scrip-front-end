@@ -1,4 +1,5 @@
 main {
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -7,192 +8,233 @@ main {
     justify-content: center;
     height: max-content;
 
-    .datos {
-
-        .card {
-
-
-            width: max-content;
-            height: max-content;
-
-
-            form {
-
-                label {
-                    font-size: 1.8rem;
-                    color: rgb(9, 9, 9);
-                    border-bottom: solid 3px black;
-
-                }
-
-                gap: 2rem;
-
-                border: solid 3px black;
-                width: 30rem;
-                height: 30rem;
-
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
+    .contenedor {
+        display: flex;
+        gap: 10rem;
+        width: max-content;
+        margin-left: 10rem;
+        background-color: rgba(255, 255, 255, 0.467);
+        backdrop-filter: blur(5px);
 
 
 
-                input {
-                    width: 20rem;
-                    height: 3rem;
-                    font-size: 1.3rem;
+        .datos {
 
-                    &::placeholder {
-                        font-size: 1rem;
-                        background-color: rgb(166, 186, 36);
-                        text-align: center;
-                    }
-                }
-
-                button {
-                    background-color: rgb(166, 186, 36);
-
-                    font-size: 1.3rem;
-                    padding: 0.5rem 1rem;
-
-                    &:hover {
-                        transform: scale(1.09);
-                    }
-                }
+            .card {
 
 
+                width: max-content;
+                height: max-content;
 
-                input {
-                    width: 15rem;
-                    background: transparent;
-                    height: 2rem;
 
-                    &:hover {
-                        background-color: rgb(166, 186, 36);
+                form {
+
+                    label {
+                        font-size: 1.8rem;
+                        color: rgb(9, 9, 9);
+                        border-bottom: 3px solid rgb(166, 186, 36);
+
 
                     }
 
+                    gap: 2rem;
 
-                    cursor: pointer;
-
-                    &:focus {
-                        transform: scale(1.1);
-                    }
-
-                }
-
-
-
-
-
-
-
-            }
-        }
-    }
-
-    .preguntas {
-
-        width: 30rem;
-        height: 30rem;
-        border: solid 3px black;
-
-
-
-        div {
-            width: 30rem;
-            height: 30rem;
-
-            h2 {
-                font-size: 1.5rem;
-                text-align: center;
-                border: solid 3px black;
-
-            }
-
-            .anclas {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 3rem;
-
-                a {
-                    width: 15rem;
-                    height: 3rem;
                     border: solid 3px black;
-                    font-size: 1.4rem;
-                    text-decoration: none;
-                    text-align: center;
-                    color: black;
-                    padding-top: 0.5rem;
+                    width: 30rem;
+                    height: 30rem;
 
-                    &:hover {
-                        background-color: rgb(166, 186, 36);
-                        font-size: 1.6rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+
+
+                    input {
+                        width: 20rem;
+                        height: 3rem;
+                        font-size: 1.3rem;
+
+                        &::placeholder {
+                            font-size: 1rem;
+                            background-color: rgb(166, 186, 36);
+                            text-align: center;
+                        }
                     }
+
+                    button {
+                        background-color: rgb(166, 186, 36);
+
+                        font-size: 1.3rem;
+                        padding: 0.5rem 1rem;
+
+                        &:hover {
+                            transform: scale(1.09);
+                        }
+                    }
+
+
+
+                    input {
+                        width: 15rem;
+                        background: transparent;
+                        height: 2rem;
+
+                        &:hover {
+                            background-color: rgb(166, 186, 36);
+
+                        }
+
+
+                        cursor: pointer;
+
+                        &:focus {
+                            transform: scale(1.1);
+                        }
+
+                    }
+
+
+
+
 
 
 
                 }
             }
         }
+
+        .preguntas {
+
+            width: 30rem;
+            height: 15rem;
+            border: solid 3px black;
+
+
+
+            div {
+                width: 30rem;
+                height: 15rem;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                h2 {
+                    font-size: 1.5rem;
+                    text-align: center;
+                    border: solid 3px black;
+
+                }
+
+                div {
+                    width: 25rem;
+                    display: flex;
+                    justify-content: center;
+
+                    form {
+                        select {
+                            background-color: rgb(166, 186, 36);
+                            text-transform: capitalize;
+                            text-align: center;
+                            font-size: 2rem;
+                            width: 25rem;
+                            height: 5rem;
+
+                            option {
+                                font-size: 1rem;
+                            }
+
+                        }
+
+                        button {
+                            font-size: 1.4rem;
+                            background-color: rgb(166, 186, 36);
+                            width: 5rem;
+                            height: 3rem;
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+
+
     }
-
-
-
 
 
 
     //contendeor de los otros html
 
     .contenedorPreguntas {
-
-        width: 35rem;
+        margin-left: 5rem;
+        margin-bottom: 5rem;
         height: 35rem;
-        border: 3px solid black;
-        display: flex;
-        gap: 3rem;
-        flex-direction: column;
-        justify-content: start;
+        width: 35rem;
+        display: grid;
 
-        h2 {
-            margin-top: 1rem;
-        }
+        justify-content: center;
 
-        div {
-
+        column-gap: 5rem;
+        row-gap: 10rem;
+    
+        .contenido {
+            text-align: center;
+            width: 35rem;
+            height: 36rem;
+            border: 3px solid black;
             display: flex;
-            gap: 1.3rem;
+            gap: 3rem;
             flex-direction: column;
+            justify-content: start;
 
-            div {
-                display: flex;
-                align-items: center;
+            h2 {
+                margin-top: 1rem;
+            }
 
-                label {
-                    font-size: 1.3rem;
-                    border-bottom: 3px solid rgb(166, 186, 36);
-                }
-
-                input {
-                    width: 20rem;
-                    height: 2rem;
-                    font-size: 1rem;
-
-                    &:hover {
-                        background-color: rgb(166, 186, 36);
+            div{
+                form {
+                    display: flex;
+                    gap: 1.3rem;
+                    flex-direction: column;
+    
+                    align-items: center;
+    
+                    label {
+                        font-size: 1.3rem;
+                        border-bottom: 3px solid rgb(166, 186, 36);
+                        cursor: pointer;
                     }
-                }
-
-                button {
-                    font-size: 1.5rem;
-                    padding: 0.6rem;
+    
+                    input {
+                        width: 20rem;
+                        height: 2rem;
+                        font-size: 1rem;
+    
+                        &:hover {
+                            background-color: rgb(166, 186, 36);
+                        }
+                    }
+    
+                    button {
+                        font-size: 1.5rem;
+                        padding: 0.6rem;
+                        background-color: rgb(166, 186, 36);
+    
+                        &:hover {
+                            transform: scale(1.1);
+                            font-size: 150%;
+                        }
+                    }
                 }
             }
 
+
+         
         }
+
+
 
 
 

@@ -12,9 +12,10 @@
     <header>
 
         <nav>
-            <button type="submit">ver mi puntaje</button>
+            <button id="verPuntos" type="submit">ver mi puntaje</button>
+            <button id="guardar" type="button">Guardar Puntos</button>
             <h1>bienvenido a triviaquest</h1>
-            <a href="index.html">inicio</a>
+            <button type="button" id="reset" href="index.html">Reset</button>
 
         </nav>
 
@@ -24,62 +25,186 @@
     <main>
 
 
-        <section class="datos">
-
-            <div class="card">
-
-                <form id="formulario">
+        <section class="contenedor">
 
 
-                    <label  for="usuario">eliga un nombre de usuario</label>
-                    <input type="text" required id="usuario">
+            <section class="datos">
 
-                    <label  for="color">eligue tu color favorito :)</label>
-                    <input type="color" id="color" name="color" class="colores a"></input>
+                <div class="card">
+
+                    <form id="formulario">
 
 
+                        <label for="usuario">eliga un nombre de usuario</label>
+                        <input type="text" required id="usuario">
 
-                    <button id="agregar">listo</button>
-
-                </form>
-
-            </div>
-        </section>
+                        <label for="color">eligue tu color favorito :)</label>
+                        <input type="color" id="color" name="color" class="colores a">
 
 
 
-        <section class="preguntas">
+                        <button id="agregar">listo</button>
+
+                    </form>
+
+                </div>
+            </section>
 
 
-            <div>
 
-                <h2 class="cr">elije el tipo de pregunta</h2>
+            <section class="preguntas" id="contenedorP" style="display: block;">
 
-                <div class="anclas">
 
-                    <a href="geografia.html">greografia</a>
-                    <a href="entretenimiento.html">entretenimiento</a>
-                    <a href="arte.html">arte</a>
-                    <a href="deportes.html">deportes</a>
+                <div >
+
+                    <h2 class="cr">elije el tipo de pregunta</h2>
+
+                    <div >
+                        <form action="">
+                            <select name="preguntas" id="preguntas">
+                                <option value="">👾👾</option>
+                                <option value="geografia" >geografia</option>
+                                <option value="entretenimiento" >entretenimiento</option>
+                                <option value="deportes" >deportes</option>
+                                <option value="arte" >arte</option>
+                            </select>   
+                            <button id="btnP" type="button"> listo</button>
+
+                        </form>
+
+
+
+                    </div>
 
                 </div>
 
+            </section>
+
+
+        </section>
+
+        
+        <section class="contenedorPreguntas">
+
+
+            <div id="geografia"     class="contenido"    style="display: none;">
+
+                <h2>bienvenido eligiste geografia</h2>
+
+                <div>
+                    <h2>tus preguntas son :</h2>
+                    <form id="formGeo">
+                        <label for="respuesta0">¿cual es la montaña mas grande del mundo?</label>
+                        <input  id="respuesta0" required   name="respuesta0"  type="text">
+
+                        <label for="respuesta1">¿Cuántos océanos hay en la Tierra?</label>
+                        <input  id="respuesta1" required   name="respuesta1" type="text">
+
+                        <label for="respuesta2">¿Qué país tiene más habitantes?</label>
+                        <input  id="respuesta2" required   name="respuesta2" type="text">
+                        <button class="buttonGe" type="submit">listo</button>
+                        <button class="btnL" type="button">cambiar de pregunta</button>
+
+
+
+                    </form>
+                </div>
             </div>
 
+
+
+                <div  id="entretenimiento"      class="contenido"   style="display: none;">
+
+                    <h2>bienvenido eligiste entretenimiento</h2>
+
+                    <div>
+                        <h2>tus preguntas son :</h2>
+                        <form id="formEnt">
+                            <label for="respuesta3">¿que pelicula de hollywood tuvo la mayor recaudacion? \n (pequeña pista sus personajes son azules y altos ;)"</label>
+                            <input  id="respuesta3" required name="respuesta3" type="text">
+
+                            <label for="respuesta4">¿Cómo se llamaba el cantante de Queen?</label>
+                            <input  id="respuesta4" required  name="respuesta4" type="text">
+
+                            <label for="respuesta5">¿A qué grupo musical pertenece la canción Smells like teen spirit?</label>
+                            <input id="respuesta5"required  name="respuesta5" type="text">
+
+                            <button class="buttonGe" type="submit">listo</button>
+                            <button class="btnL" type="button">cambiar de pregunta</button>
+
+
+
+
+                        </form>
+                    </div>
+
+
+
+                </div>
+
+
+                <div  id="deportes"     class="contenido"    style="display: none;">
+
+                    <h2>bienvenido eligiste deportes</h2>
+
+                    <div>
+                        <h2>tus preguntas son :</h2>
+                        <form id="formDep">
+                            <label for="respuesta6">¿cual es el actual jugador con mas balones de oro?</label>
+                            <input  id="respuesta6"  required    name="respuesta6" type="text">
+
+                            <label for="respuesta7">¿Qué selección ganó el Mundial de fútbol de Brasil en el 2014?</label>
+                            <input  id="respuesta7"  required name="respuesta7"   type="text">
+
+                            <label for="respuesta8">¿En qué pais nació Valentino Rossi?</label>
+                            <input  id="respuesta8"  required name="respuesta8"   type="text">
+                            
+                            <button class="buttonGe" type="submit">listo</button>
+                            <button class="btnL" type="button">cambiar de pregunta</button>
+
+
+                        </form>
+                    </div>
+
+
+
+                </div>
+
+
+
+                <div id="arte"     class="contenido"    style="display: none;">
+
+                    <h2>bienvenido eligiste arte</h2>
+
+                    <div>
+                        <h2>tus preguntas son :</h2>
+                        <form id="formArte">
+                            <label  for="respuesta9">¿cual es el nombre del pintor europeo del siglo XIX que es conocido por cortarse la oreja?</label>
+                            <input required id="respuesta9"  name="respuesta9"  type="text">
+
+                            <label for="respuesta10">¿Quién es el autor de la Ilíada y la Odisea?</label>
+                            <input required id="respuesta10" name="respuesta10"  type="text">
+
+                            <label for="respuesta11">¿Quién pintó la Capilla Sixtina?</label>
+                            <input required id="respuesta11" name="respuesta11" type="text">
+                            <button class="buttonGe"   type="submit">listo</button>
+                            <button class="btnL" type="button">cambiar de pregunta</button>
+
+
+
+                        </form>
+                    </div>
+
+
+
+                </div>
+
+
+
         </section>
 
 
 
-
-
-
-
-
-
-
-        <section id="contenedorPreguntas" style="display: none;">
-
-        </section>
 
 
     </main>
@@ -87,7 +212,6 @@
 
 
     </footer>
-    <script src="usuarioClass.js"></script>
     <script src="index.js"></script>
 </body>
 
