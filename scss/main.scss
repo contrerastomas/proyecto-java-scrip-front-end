@@ -13,15 +13,15 @@ main {
         gap: 10rem;
         width: max-content;
         margin-left: 10rem;
-        background-color: rgba(255, 255, 255, 0.467);
-        backdrop-filter: blur(5px);
+
 
 
 
         .datos {
 
             .card {
-
+                background-color: rgba(215, 204, 204, 0.301);
+                backdrop-filter: blur(10px);
 
                 width: max-content;
                 height: max-content;
@@ -110,7 +110,8 @@ main {
             height: 15rem;
             border: solid 3px black;
 
-
+            background-color: rgba(215, 204, 204, 0.434);
+            backdrop-filter: blur(10px);
 
             div {
                 width: 30rem;
@@ -178,13 +179,15 @@ main {
 
         column-gap: 5rem;
         row-gap: 10rem;
-    
+
         .contenido {
             text-align: center;
             width: 35rem;
             height: 36rem;
             border: 3px solid black;
             display: flex;
+            background-color: rgba(215, 204, 204, 0.434);
+            backdrop-filter: blur(10px);
             gap: 3rem;
             flex-direction: column;
             justify-content: start;
@@ -193,35 +196,35 @@ main {
                 margin-top: 1rem;
             }
 
-            div{
+            div {
                 form {
                     display: flex;
                     gap: 1.3rem;
                     flex-direction: column;
-    
+
                     align-items: center;
-    
+
                     label {
                         font-size: 1.3rem;
                         border-bottom: 3px solid rgb(166, 186, 36);
                         cursor: pointer;
                     }
-    
+
                     input {
                         width: 20rem;
                         height: 2rem;
                         font-size: 1rem;
-    
+
                         &:hover {
                             background-color: rgb(166, 186, 36);
                         }
                     }
-    
+
                     button {
                         font-size: 1.5rem;
                         padding: 0.6rem;
                         background-color: rgb(166, 186, 36);
-    
+
                         &:hover {
                             transform: scale(1.1);
                             font-size: 150%;
@@ -231,7 +234,7 @@ main {
             }
 
 
-         
+
         }
 
 

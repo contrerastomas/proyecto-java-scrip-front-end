@@ -15,42 +15,6 @@ let preguntasDeportes;
 let preguntasArte;
 let preguntasGeografia;
 
-//funciones
-/*
-function sumarPuntos() {
-  alert("respuesta correcta se te sumaran puntos");
-
-  let sumatoria = usuarios.find((el) => el.NombreUsuario == ingresarNombre);
-
-  let puntaje = (sumatoria.Score += 5);
-
-  return sumatoria;
-}
-
-function restarPuntos() {
-  alert("respuesta incorrecta se te descontaran puntos");
-
-  let resta = usuarios.find((el) => el.NombreUsuario == ingresarNombre);
-
-  let puntaje = (resta.Score -= 1);
-
-  return resta;
-}
-
-function ingresarNombres() {
-  ingresarNombre = prompt("ingrese un nombre de usuario");
-
-  usuarios.push(new Usuario(ingresarNombre));
-
-  return ingresarNombre;
-}
-
-function mostrarScore() {
-  let buscarUsuario = usuarios.find((el) => el.NombreUsuario == ingresarNombre);
-
-  return buscarUsuario.Score;
-}
-*/
 
 //doom
 
@@ -411,10 +375,10 @@ class Usuario {
    * @param {string} NombreUsuario solicita el nombre de usuario
    */
 
-  constructor(NombreUsuario,color) {
-      this.NombreUsuario = NombreUsuario,
-      this.color=color,
-          this.Score = 0
+  constructor(NombreUsuario, color) {
+    this.NombreUsuario = NombreUsuario,
+      this.color = color,
+      this.Score = 0
   }
 
 }
@@ -433,31 +397,37 @@ let colorInput = document.getElementById("color");
 let color;
 let select = document.getElementById("preguntas");
 let btnP = document.getElementById("btnP");
-
+let user
 //funciones
 
 function agregarColor() {
+
   color = colorInput.value;
 
   usuarios.push(new Usuario(nombre, color));
-  console.log("agregarColor:" ,usuarios.color)
-  
-  console.log("agregarNombre:" ,usuarios[usuarios.length-1].color)
 
-  return usuarios[usuarios.length-1].color;
-
+  return color
 }
 
 
 
 function agregarNombre(nombre, color) {
 
+  const usuarioExistente = usuarios.find((el) => el.NombreUsuario == nombre)
 
-  usuarios.push(new Usuario(nombre, color));
-  console.log(nombre,color)
-  console.log("agregarNombre:" ,usuarios[usuarios.length-1].NombreUsuario)
+  if (usuarioExistente) {
 
-  return usuarios[usuarios.length-1].NombreUsuario;
+    console.log(nombre + " ya existe")
+  } else {
+
+    user = new Usuario(nombre, color)
+
+    usuarios.push(user);
+
+  }
+
+
+  return user;
 }
 
 
@@ -498,7 +468,6 @@ function verPuntaje(nombre) {
 let btnVerPuntos = document.getElementById("verPuntos");
 let btnGeneral = document.querySelectorAll(".buttonGe");
 let btnL = document.querySelectorAll(".btnL");
-let guardarPuntos = document.getElementById("guardar");
 
 //variables de etiquetas para cambiar color
 
@@ -526,11 +495,11 @@ formularioUsuario.addEventListener("submit", function (e) {
   color = form.elements.color.value;
 
   agregarNombre(nombre, color);
-  console.log(nombre,color)
+  guardarUsuario(user)
 
   cambiarColor(h2);
   cambiarColor(label);
-  cambiarColor(a);
+  cambiarColor(reset);
   cambiarColor(h1);
 });
 
@@ -548,8 +517,8 @@ formGeo.addEventListener("submit", function (e) {
     restarPuntaje(nombre);
     alert(
       "respuesta incorrecta " +
-        respuesta0 +
-        " no es la montaña mas grande del mundo"
+      respuesta0 +
+      " no es la montaña mas grande del mundo"
     );
   }
   if (respuesta1 == preguntas[10].respuesta) {
@@ -558,8 +527,8 @@ formGeo.addEventListener("submit", function (e) {
     restarPuntaje(nombre);
     alert(
       "respuesta incorrecta " +
-        respuesta1 +
-        " no es la cantidad de oceanos que existen"
+      respuesta1 +
+      " no es la cantidad de oceanos que existen"
     );
   }
 
@@ -569,8 +538,8 @@ formGeo.addEventListener("submit", function (e) {
     restarPuntaje(nombre);
     alert(
       "respuesta incorrecta  " +
-        respuesta2 +
-        " no es el pias con mas habitantes "
+      respuesta2 +
+      " no es el pias con mas habitantes "
     );
   }
 
@@ -608,8 +577,8 @@ formEnt.addEventListener("submit", function (e) {
     restarPuntaje(nombre);
     alert(
       "respuesta incorrecta  " +
-        respuesta5 +
-        " la cancion no pertenece a ese grupo "
+      respuesta5 +
+      " la cancion no pertenece a ese grupo "
     );
   }
 
@@ -649,8 +618,8 @@ formDep.addEventListener("submit", function (e) {
     restarPuntaje(nombre);
     alert(
       "respuesta incorrecta  " +
-        respuesta8 +
-        " no es el pais de nacimiento de valentino rossi "
+      respuesta8 +
+      " no es el pais de nacimiento de valentino rossi "
     );
   }
 
@@ -721,46 +690,40 @@ select.addEventListener("change", function () {
 });
 
 
-guardarPuntos.addEventListener("click", function () {
-  localStorage.setItem("arrayUsuarios", JSON.stringify(usuarios));
-});
+function guardarUsuario(usuario) {
+  const usuariosStorage = JSON.parse(localStorage.getItem("arrayUsuarios")) || [];
+  const usuarioExistente = usuariosStorage.find((u) => u.NombreUsuario === usuario.NombreUsuario);
 
-
-function loadUserData(){
-  const user = localStorage.getItem("arrayUsuarios")
-  console.log(user)
-}
-
-let usuariosStorage = localStorage.getItem("arrayUsuarios");
-
-
-
-
-if(usuariosStorage){
-
-  usuarios = JSON.parse(usuariosStorage);
+  if (!usuarioExistente) {
+    usuariosStorage.push(usuario);
+    localStorage.setItem("arrayUsuarios", JSON.stringify(usuariosStorage));
+  }
 }
 
 
+function loadUserData() {
+  const usuariosStorage = JSON.parse(localStorage.getItem("arrayUsuarios")) || [];
+  usuarios = usuariosStorage;
+}
 
 
 btnVerPuntos.onclick = (e) => {
   e.preventDefault();
-  
+
   loadUserData()
 
   alert(
     "hola " +
-      nombre +
-      " tus puntos son : " +
-      verPuntaje(nombre) +
-      " y tu color es :" +
-      agregarColor()
+    nombre +
+    " tus puntos son : " +
+    verPuntaje(nombre) +
+    " y tu color es :" +
+    user.color
   );
 };
 
 
-reset.addEventListener("click",function(){
+reset.addEventListener("click", function () {
   localStorage.clear()
 })
 
@@ -770,3 +733,5 @@ function cambiarColor(vairableColor) {
     vairableColor[i].style.color = agregarColor();
   }
 }
+
+

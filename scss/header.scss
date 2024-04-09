@@ -8,21 +8,24 @@ header {
         justify-content: center;
         gap: 5rem;
         margin-top: 3rem ;
-        a{
+        #reset{
             border: 1px solid;
             font-size: 2rem;
             padding: 1rem;
             color: black;
+            background-color:rgba(215, 204, 204, 0.434);
+            backdrop-filter: blur(10px);
             &:hover{
                 transform: scale(1.05);
             }
         }
-        button{
+        #verPuntos{
             border: 1px solid;
             font-size: 2rem;
+            background-color:rgba(215, 204, 204, 0.373);
+            backdrop-filter: blur(10px);
             padding: 1rem;
             color: black;
-            background-color: transparent;
             cursor: pointer;
             &:hover{
                 transform: scale(1.05);
