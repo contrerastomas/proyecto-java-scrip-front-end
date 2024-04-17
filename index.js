@@ -1,24 +1,11 @@
 "use strict";
 
-//variables globales
+//proyecto con dom
+/*
+juego de preguntas y respuestas con puntaje y usuarios
+*/
+//objetos y arrays 
 
-let jugar;
-
-let puntos = 0;
-
-let ingresarNombre;
-
-let opcion;
-
-let preguntasEntretenimiento;
-let preguntasDeportes;
-let preguntasArte;
-let preguntasGeografia;
-
-
-//doom
-
-//arrays
 
 let preguntas = [
   {
@@ -103,269 +90,8 @@ let preguntas = [
 
 let usuarios = [];
 
+
 //objetos
-
-//programa
-/*
-do {
-
-    ingresarNombres()
-
-
-    alert("hola " + ingresarNombre + " tus puntos son  " + mostrarScore())
-
-
-
-    jugar = prompt("bienvenido " + ingresarNombre + " !! ¿deseas jugar al juego de trivia? s/n")
-    if (jugar == "s") {
-
-        alert("preparate el juego esta por comenzar!! \ntendras que eleguir que tipo de pregunta deseas jugar \n iras acumulando puntos a medida que respondas correctamente");
-
-
-        do {
-            opcion = Number(prompt("eliga el tipo de pregunta : \n entretenimiento (1) \n deportes (2) \n arte (3)\n geografia (4) \n ver mis puntos(5) \n salir(6)"));
-
-            if (opcion != 6) {
-
-                switch (opcion) {
-
-                    case 1:
-
-                        if (preguntas[0].estado == false) {
-                            let pregunta1 = prompt(preguntas[0].pregunta);
-
-                            if (pregunta1 === preguntas[0].respuesta) {
-
-                                sumarPuntos();
-
-                                const preguntas2 = preguntas.map((el) => preguntas[0].estado = true)
-
-
-                            } else {
-                                restarPuntos()
-                            }
-                        }
-
-                        if (preguntas[1].estado == false) {
-
-
-                            let pregunta2 = prompt(preguntas[1].pregunta);
-
-                            if (pregunta2 === preguntas[1].respuesta) {
-
-                                sumarPuntos()
-                                const preguntas2 = preguntas.map((el) => preguntas[1].estado = true)
-
-
-                            } else {
-                                restarPuntos()
-
-                            }
-                        }
-                        if (preguntas[2].estado == false) {
-
-
-                            let pregunta3 = prompt(preguntas[2].pregunta);
-
-                            if (pregunta3 === preguntas[2].respuesta) {
-
-                                sumarPuntos()
-                                const preguntas2 = preguntas.map((el) => preguntas[2].estado = true)
-
-
-                            } else {
-                                restarPuntos()
-
-                            }
-                        }
-
-
-                        break;
-
-                    case 2:
-
-
-                        if (preguntas[3].estado == false) {
-
-                            let pregunta4 = prompt(preguntas[3].pregunta);
-
-                            if (pregunta4 == preguntas[3].respuesta) {
-
-                                sumarPuntos()
-                                const preguntas2 = preguntas.map((el) => preguntas[3].estado = true)
-
-
-                            } else {
-                                restarPuntos()
-                            }
-                        }
-
-                        if (preguntas[4].estado == false) {
-
-                            let pregunta5 = prompt(preguntas[4].pregunta);
-
-                            if (pregunta5 == preguntas[4].respuesta) {
-
-                                sumarPuntos()
-                                const preguntas2 = preguntas.map((el) => preguntas[4].estado = true)
-
-
-                            } else {
-                                restarPuntos()
-                            }
-                        }
-
-                        if (preguntas[5].estado == false) {
-
-
-                            let pregunta6 = prompt(preguntas[5].pregunta);
-
-                            if (pregunta6 == preguntas[5].respuesta) {
-
-                                sumarPuntos()
-                                const preguntas2 = preguntas.map((el) => preguntas[5].estado = true)
-
-
-                            } else {
-                                restarPuntos()
-                            }
-                        }
-
-                        break;
-
-                    case 3:
-                        if (preguntas[6].estado == false) {
-
-
-                            let pregunta7 = prompt(preguntas[6].pregunta);
-
-                            if (pregunta7 == preguntas[6].respuesta) {
-
-                                sumarPuntos()
-                                const preguntas2 = preguntas.map((el) => preguntas[6].estado = true)
-
-
-                            } else {
-                                restarPuntos()
-                            }
-
-                        }
-                        if (preguntas[7].estado == false) {
-
-                            let pregunta8 = prompt(preguntas[7].pregunta);
-
-                            if (pregunta8 == preguntas[7].respuesta) {
-
-                                sumarPuntos()
-                                const preguntas2 = preguntas.map((el) => preguntas[7].estado = true)
-
-
-                            } else {
-                                restarPuntos()
-                            }
-
-                        }
-                        if (preguntas[8].estado == false) {
-
-
-                            let pregunta9 = prompt(preguntas[8].pregunta);
-
-                            if (pregunta9 == preguntas[8].respuesta) {
-
-                                sumarPuntos()
-                                const preguntas2 = preguntas.map((el) => preguntas[8].estado = true)
-
-
-                            } else {
-                                restarPuntos()
-                            }
-                        }
-
-
-
-                        break;
-
-                    case 4:
-
-                        if (preguntas[9].estado == false) {
-
-                            let pregunta10 = prompt(preguntas[9].pregunta);
-
-
-                            if (pregunta10 == preguntas[9].respuesta) {
-
-                                sumarPuntos()
-                                const preguntas2 = preguntas.map((el) => preguntas[9].estado = true)
-
-
-                            } else {
-                                restarPuntos()
-                            }
-
-                        }
-
-                        if (preguntas[10].estado == false) {
-
-                            let pregunta11 = prompt(preguntas[10].pregunta);
-
-
-                            if (pregunta11 == preguntas[10].respuesta) {
-
-                                sumarPuntos()
-                                const preguntas2 = preguntas.map((el) => preguntas[10].estado = true)
-
-
-                            } else {
-                                restarPuntos()
-                            }
-
-                        }
-                        if (preguntas[11].estado == false) {
-
-
-                            let pregunta12 = prompt(preguntas[11].pregunta);
-
-
-                            if (pregunta12 == preguntas[11].respuesta) {
-
-                                sumarPuntos()
-                                const preguntas2 = preguntas.map((el) => preguntas[11].estado = true)
-
-
-                            } else {
-                                restarPuntos()
-                            }
-                        }
-
-                        break
-
-                    case 5:
-                        alert("hola " + ingresarNombre + " tus puntos son " + mostrarScore())
-
-                }
-
-            } else {
-                alert("has salido del juego :(")
-            }
-
-
-
-        } while (opcion != 6)
-
-
-
-
-    } else {
-        alert("has salido del juego :(")
-    }
-
-} while (jugar == "s")
-
-*/
-
-
-
-
 
 
 class Usuario {
@@ -385,8 +111,14 @@ class Usuario {
 
 
 
+//librerias
+/*
 
-//doom
+Toastify
+
+
+
+*/
 
 //variables
 
@@ -410,7 +142,6 @@ function agregarColor() {
 }
 
 
-
 function agregarNombre(nombre, color) {
 
   const usuarioExistente = usuarios.find((el) => el.NombreUsuario == nombre)
@@ -430,44 +161,89 @@ function agregarNombre(nombre, color) {
   return user;
 }
 
+function sumarPuntaje(user) {
 
-
-
-
-function sumarPuntaje(nombre) {
-  alert("respuesta correcta se te sumaran puntos");
-
-  let sumatoria = usuarios.find((el) => el.NombreUsuario == nombre);
-
-  let puntaje = (sumatoria.Score += 5);
-
-  return puntaje;
+  user.Score += 5
 }
 
-function restarPuntaje(nombre) {
-  let sumatoria = usuarios.find((el) => el.NombreUsuario == nombre);
+function restarPuntaje(user) {
 
-  let puntaje = (sumatoria.Score -= 3);
-
-  return puntaje;
+  user.Score -= 3
 }
 
 function verPuntaje(nombre) {
+  
+  const usuariosStorage = JSON.parse(localStorage.getItem("arrayUsuarios"))
+  const usuarioExistente = usuariosStorage.find((u) => u.userUsuario === nombre);
+
+  if (usuarioExistente) {
+
+    usuariosStorage = user
+
+
+  }
+  /*
+
+
+ 
+
+  const usuariosStorage = JSON.parse(localStorage.getItem("arrayUsuarios"))
+
+
+  const usuarioExistente = usuariosStorage.find((u) => u.userUsuario === nombre);
+
+
+
   let buscar = usuarios.find((el) => el.NombreUsuario == nombre);
 
+
+
   return buscar.Score;
+  */
+
+  return user
 }
 
-/*
+function guardarUsuario(usuario) {
+  const usuariosStorage = JSON.parse(localStorage.getItem("arrayUsuarios")) || [];
+  const usuarioExistente = usuariosStorage.find((u) => u.NombreUsuario === usuario.NombreUsuario);
+
+  if (!usuarioExistente) {
+    usuariosStorage.push(usuario);
+    localStorage.setItem("arrayUsuarios", JSON.stringify(usuariosStorage));
+  }
+}
 
 
-*/
+function loadUserData() {
+  const usuariosStorage = JSON.parse(localStorage.getItem("arrayUsuarios")) || [];
+
+  usuarios = usuariosStorage;
+  const usuarioExistente = usuariosStorage.find((u) => u.NombreUsuario === user.NombreUsuario);
+  if (usuarioExistente) {
+    user = usuarioExistente;
+    return user;
+  } else {
+    return null;
+  }
+}
+
+
+function cambiarColor(vairableColor) {
+  for (let i = 0; i < vairableColor.length; i++) {
+    vairableColor[i].style.color = agregarColor();
+  }
+}
+
+
 
 //variables botones
 
 let btnVerPuntos = document.getElementById("verPuntos");
 let btnGeneral = document.querySelectorAll(".buttonGe");
 let btnL = document.querySelectorAll(".btnL");
+let btnAgr = document.querySelector("#agregar");
+const guardar = document.getElementById("Guardar")
 
 //variables de etiquetas para cambiar color
 
@@ -495,7 +271,33 @@ formularioUsuario.addEventListener("submit", function (e) {
   color = form.elements.color.value;
 
   agregarNombre(nombre, color);
-  guardarUsuario(user)
+  //guardarUsuario(user)
+
+  btnAgr.innerHTML="Guardando ....."
+  setTimeout(()=>{
+
+  btnAgr.innerHTML="Guardado con exito"
+      
+  Toastify({
+    text: "Bienvenido "+ user.NombreUsuario + "  !!\n "+"Eligue el tipo de pregunta que quieres responder 👇" ,
+    duration: 10000,
+    
+    newWindow: true,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "center", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      width: "60rem",
+      fontSize: "2rem",
+      background: "linear-gradient(to right, #C1292E,#C1292E)",
+    },
+    onClick: function () { } // Callback after click
+  }).showToast();
+  },3000)
+
+
+
 
   cambiarColor(h2);
   cambiarColor(label);
@@ -511,41 +313,142 @@ formGeo.addEventListener("submit", function (e) {
   const respuesta1 = form.elements.respuesta1.value;
   const respuesta2 = form.elements.respuesta2.value;
 
+
+
+
+
   if (respuesta0 == preguntas[9].respuesta) {
-    sumarPuntaje(nombre);
+    sumarPuntaje(user);
+
+    Toastify({
+      text: "¨" + respuesta0 + "¨" + " es la respuesta correcta",
+      duration: 3000,
+
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right,  #96c93d, #96c93d)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
+
+
   } else {
-    restarPuntaje(nombre);
-    alert(
-      "respuesta incorrecta " +
-      respuesta0 +
-      " no es la montaña mas grande del mundo"
-    );
+    restarPuntaje(user);
+
+    Toastify({
+      text: "respuesta incorrecta " +
+        " ¨" + respuesta0 + "¨ " +
+        " no es la montaña mas grande del mundo",
+      duration: 3000,
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right, #000, #BB0A21)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
+
+
+
+
   }
   if (respuesta1 == preguntas[10].respuesta) {
-    sumarPuntaje(nombre);
+    sumarPuntaje(user);
+
+    Toastify({
+      text: "¨" + respuesta1 + "¨" + " es la respuesta correcta",
+      duration: 3000,
+
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right,  #96c93d, #96c93d)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
+
+
   } else {
-    restarPuntaje(nombre);
-    alert(
-      "respuesta incorrecta " +
-      respuesta1 +
-      " no es la cantidad de oceanos que existen"
-    );
+    restarPuntaje(user);
+    Toastify({
+      text: "respuesta incorrecta " +
+        " ¨" + respuesta1 + "¨ " +
+        " no es la cantidad de oceanos que existen",
+      duration: 3000,
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right, #000, #BB0A21)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
+
+
   }
 
   if (respuesta2 == preguntas[11].respuesta) {
-    sumarPuntaje(nombre);
-  } else {
-    restarPuntaje(nombre);
-    alert(
-      "respuesta incorrecta  " +
-      respuesta2 +
-      " no es el pias con mas habitantes "
-    );
-  }
+    sumarPuntaje(user);
 
-  alert(
-    "tus respuestas son " + respuesta0 + " " + respuesta1 + " " + respuesta2
-  );
+    Toastify({
+      text: "¨" + respuesta2 + "¨" + " es la respuesta correcta",
+      duration: 3000,
+
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right,  #96c93d, #96c93d)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
+
+  } else {
+    restarPuntaje(user);
+    Toastify({
+      text: "respuesta incorrecta  " +
+        " ¨" + respuesta2 + "¨ " +
+        " no es el pais con mas habitantes ",
+      duration: 3000,
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right, #000, #BB0A21)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
+
+
+  }
 });
 
 formEnt.addEventListener("submit", function (e) {
@@ -557,34 +460,124 @@ formEnt.addEventListener("submit", function (e) {
   const respuesta5 = form.elements.respuesta5.value;
 
   if (respuesta3 == preguntas[0].respuesta) {
-    sumarPuntaje(nombre);
+    sumarPuntaje(user);
+    Toastify({
+      text: "¨" + respuesta3 + "¨" + " es la respuesta correcta",
+      duration: 3000,
+
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right, #96c93d, #96c93d)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
+
   } else {
-    restarPuntaje(nombre);
-    alert(
-      "respuesta incorrecta " + respuesta3 + " no es la pelicula mas taquillera"
-    );
+    restarPuntaje(user);
+    Toastify({
+      text: "respuesta incorrecta " + " ¨" + respuesta3 + "¨ " + " no es la pelicula mas taquillera",
+      duration: 3000,
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right, #000, #BB0A21)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
+
   }
   if (respuesta4 == preguntas[1].respuesta) {
-    sumarPuntaje(nombre);
+    sumarPuntaje(user);
+    Toastify({
+      text: "¨" + respuesta4 + "¨" + " es la respuesta correcta",
+      duration: 3000,
+
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right, #96c93d, #96c93d)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
+
   } else {
-    restarPuntaje(nombre);
-    alert("respuesta incorrecta " + respuesta4 + " no es el cantante de queen");
+    restarPuntaje(user);
+    Toastify({
+      text: "respuesta incorrecta " + " ¨" + respuesta4 + "¨ " + " no es el cantante de queen",
+      duration: 3000,
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right, #000, #BB0A21)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
+
   }
 
   if (respuesta5 == preguntas[2].respuesta) {
-    sumarPuntaje(nombre);
+    sumarPuntaje(user);
+
+    Toastify({
+      text: "¨" + respuesta5 + "¨" + " es la respuesta correcta",
+      duration: 3000,
+
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right,  #96c93d, #96c93d)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
   } else {
-    restarPuntaje(nombre);
-    alert(
-      "respuesta incorrecta  " +
-      respuesta5 +
-      " la cancion no pertenece a ese grupo "
-    );
+    restarPuntaje(user);
+    Toastify({
+      text: "respuesta incorrecta  " +
+        " ¨" + respuesta5 + "¨ " +
+        " la cancion no pertenece a ese grupo ",
+      duration: 3000,
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right, #000, #BB0A21)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
+
   }
 
-  alert(
-    "tus respuestas son " + respuesta3 + " " + respuesta4 + " " + respuesta5
-  );
+
 });
 
 formDep.addEventListener("submit", function (e) {
@@ -596,36 +589,127 @@ formDep.addEventListener("submit", function (e) {
   const respuesta8 = form.elements.respuesta8.value;
 
   if (respuesta6 == preguntas[3].respuesta) {
-    sumarPuntaje(nombre);
+    sumarPuntaje(user);
+    Toastify({
+      text: "¨" + respuesta6 + "¨" + " es la respuesta correcta",
+      duration: 3000,
+
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right,  #96c93d, #96c93d)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
+
   } else {
-    restarPuntaje(nombre);
-    alert(
-      "respuesta incorrecta " + respuesta6 + " no tiene mas balones de oro"
-    );
+    restarPuntaje(user);
+    Toastify({
+      text: "respuesta incorrecta " +
+        " ¨" + respuesta6 + "¨ " +
+        " no tiene mas balones de oro",
+      duration: 3000,
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right, #000, #BB0A21)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
+
+
   }
   if (respuesta7 == preguntas[4].respuesta) {
-    sumarPuntaje(nombre);
+    sumarPuntaje(user);
+    Toastify({
+      text: "¨" + respuesta7 + "¨" + " es la respuesta correcta",
+      duration: 3000,
+
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right,  #96c93d, #96c93d)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
   } else {
-    restarPuntaje(nombre);
-    alert(
-      "respuesta incorrecta " + respuesta7 + " no gano el mundial del 2014"
-    );
+    restarPuntaje(user);
+    Toastify({
+      text: "respuesta incorrecta " + " ¨" + respuesta6 + "¨ " + " no gano el mundial del 2014",
+      duration: 3000,
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right, #000, #BB0A21)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
+
+
   }
 
   if (respuesta8 == preguntas[5].respuesta) {
-    sumarPuntaje(nombre);
+    sumarPuntaje(user);
+    Toastify({
+      text: "¨" + respuesta8 + "¨" + " es la respuesta correcta",
+      duration: 3000,
+
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right,  #96c93d, #96c93d)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
   } else {
-    restarPuntaje(nombre);
-    alert(
-      "respuesta incorrecta  " +
-      respuesta8 +
-      " no es el pais de nacimiento de valentino rossi "
-    );
+    restarPuntaje(user);
+    Toastify({
+      text: "respuesta incorrecta  " +
+        " ¨" + respuesta8 + "¨ " +
+        " no es el pais de nacimiento de valentino rossi ",
+      duration: 3000,
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right, #000, #BB0A21)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
+
+
   }
 
-  alert(
-    "tus respuestas son " + respuesta6 + " " + respuesta7 + " " + respuesta8
-  );
+
 });
 
 formArte.addEventListener("submit", function (e) {
@@ -637,32 +721,123 @@ formArte.addEventListener("submit", function (e) {
   const respuesta11 = form.elements.respuesta11.value;
 
   if (respuesta9 == preguntas[6].respuesta) {
-    sumarPuntaje(nombre);
+    sumarPuntaje(user);
+    Toastify({
+      text: "¨" + respuesta9 + "¨" + " es la respuesta correcta",
+      duration: 3000,
+
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right,  #96c93d, #96c93d)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
   } else {
-    restarPuntaje(nombre);
-    alert(
-      "respuesta incorrecta " + respuesta9 + " no fue quien se corto la oreja "
-    );
+    restarPuntaje(user);
+    Toastify({
+      text: "respuesta incorrecta " + " ¨" + respuesta9 + "¨ " + " no fue quien se corto la oreja ",
+      duration: 3000,
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right, #000, #BB0A21)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
+
+
   }
   if (respuesta10 == preguntas[7].respuesta) {
-    sumarPuntaje(nombre);
+    sumarPuntaje(user);
+
+    Toastify({
+      text: "¨" + respuesta10 + "¨" + " es la respuesta correcta",
+      duration: 3000,
+
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right,  #96c93d, #96c93d)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
   } else {
-    restarPuntaje(nombre);
-    alert("respuesta incorrecta " + respuesta10 + " no escribio esos libros");
+    restarPuntaje(user);
+    Toastify({
+      text: "respuesta incorrecta " + " ¨" + respuesta10 + "¨ " + " no escribio esos libros",
+      duration: 3000,
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right, #000, #BB0A21)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
+
+
   }
 
   if (respuesta11 == preguntas[8].respuesta) {
-    sumarPuntaje(nombre);
+    sumarPuntaje(user);
+    Toastify({
+      text: "¨" + respuesta11 + "¨" + " es la respuesta correcta",
+      duration: 3000,
+
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right, #96c93d, #96c93d)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
   } else {
-    restarPuntaje(nombre);
-    alert(
-      "respuesta incorrecta  " + respuesta11 + " no pinto la capilla sixtina "
-    );
+    restarPuntaje(user);
+    Toastify({
+      text: "respuesta incorrecta  " + " ¨" + respuesta11 + "¨ " + " no pinto la capilla sixtina ",
+      duration: 3000,
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        width: "40rem",
+        fontSize: "1.5rem",
+        background: "linear-gradient(to right, #000, #BB0A21)",
+      },
+      onClick: function () { } // Callback after click
+    }).showToast();
+
+
   }
 
-  alert(
-    "tus respuestas son " + respuesta9 + " " + respuesta10 + " " + respuesta11
-  );
+
 });
 
 select.addEventListener("change", function () {
@@ -690,48 +865,43 @@ select.addEventListener("change", function () {
 });
 
 
-function guardarUsuario(usuario) {
-  const usuariosStorage = JSON.parse(localStorage.getItem("arrayUsuarios")) || [];
-  const usuarioExistente = usuariosStorage.find((u) => u.NombreUsuario === usuario.NombreUsuario);
+guardar.onclick = (e) => {
+  e.preventDefault()
 
-  if (!usuarioExistente) {
-    usuariosStorage.push(usuario);
-    localStorage.setItem("arrayUsuarios", JSON.stringify(usuariosStorage));
-  }
+  guardarUsuario(user)
 }
-
-
-function loadUserData() {
-  const usuariosStorage = JSON.parse(localStorage.getItem("arrayUsuarios")) || [];
-  usuarios = usuariosStorage;
-}
-
 
 btnVerPuntos.onclick = (e) => {
   e.preventDefault();
+  loadUserData(user)
 
-  loadUserData()
+  Toastify({
+    text: "hola " + "¨" +
+      user.NombreUsuario + "¨" +
+      " tus puntos son : " +
+      user.Score
+      + " y tu color es: " +
+      user.color,
+    duration: 3000,
 
-  alert(
-    "hola " +
-    nombre +
-    " tus puntos son : " +
-    verPuntaje(nombre) +
-    " y tu color es :" +
-    user.color
-  );
+    newWindow: true,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "center", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      width: "40rem",
+      fontSize: "2rem",
+      background: "linear-gradient(to right, #000,#000)",
+    },
+    onClick: function () { } // Callback after click
+  }).showToast();
+
+
+
 };
-
 
 reset.addEventListener("click", function () {
   localStorage.clear()
 })
-
-
-function cambiarColor(vairableColor) {
-  for (let i = 0; i < vairableColor.length; i++) {
-    vairableColor[i].style.color = agregarColor();
-  }
-}
-
 

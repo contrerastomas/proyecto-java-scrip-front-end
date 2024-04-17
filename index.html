@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body>
@@ -13,6 +15,7 @@
 
         <nav>
             <button id="verPuntos" type="submit">ver mi puntaje</button>
+            <button id="Guardar" type="submit">guardar puntos</button>
             <h1>bienvenido a triviaquest</h1>
             <button type="button" id="reset" href="index.html">Reset</button>
 
@@ -42,7 +45,7 @@
 
 
 
-                        <button id="agregar">listo</button>
+                        <button id="agregar">Guardar</button>
 
                     </form>
 
@@ -93,13 +96,13 @@
                 <div>
                     <h2>tus preguntas son :</h2>
                     <form id="formGeo">
-                        <label for="respuesta0">¿cual es la montaña mas grande del mundo?</label>
+                        <label for="respuesta0">A- ¿cual es la montaña mas grande del mundo?</label>
                         <input  id="respuesta0" required   name="respuesta0"  type="text">
 
-                        <label for="respuesta1">¿Cuántos océanos hay en la Tierra?</label>
+                        <label for="respuesta1">B- ¿Cuántos océanos hay en la Tierra?</label>
                         <input  id="respuesta1" required   name="respuesta1" type="text">
 
-                        <label for="respuesta2">¿Qué país tiene más habitantes?</label>
+                        <label for="respuesta2">C- ¿Qué país tiene más habitantes?</label>
                         <input  id="respuesta2" required   name="respuesta2" type="text">
                         <button class="buttonGe" type="submit">listo</button>
                         <button class="btnL" type="button">cambiar de pregunta</button>
@@ -119,13 +122,13 @@
                     <div>
                         <h2>tus preguntas son :</h2>
                         <form id="formEnt">
-                            <label for="respuesta3">¿que pelicula de hollywood tuvo la mayor recaudacion? \n (pequeña pista sus personajes son azules y altos ;)"</label>
+                            <label for="respuesta3">A- ¿que pelicula de hollywood tuvo la mayor recaudacion? \n (pequeña pista sus personajes son azules y altos ;)"</label>
                             <input  id="respuesta3" required name="respuesta3" type="text">
 
-                            <label for="respuesta4">¿Cómo se llamaba el cantante de Queen?</label>
+                            <label for="respuesta4">B- ¿Cómo se llamaba el cantante de Queen?</label>
                             <input  id="respuesta4" required  name="respuesta4" type="text">
 
-                            <label for="respuesta5">¿A qué grupo musical pertenece la canción Smells like teen spirit?</label>
+                            <label for="respuesta5">C- ¿A qué grupo musical pertenece la canción Smells like teen spirit?</label>
                             <input id="respuesta5"required  name="respuesta5" type="text">
 
                             <button class="buttonGe" type="submit">listo</button>
@@ -149,13 +152,13 @@
                     <div>
                         <h2>tus preguntas son :</h2>
                         <form id="formDep">
-                            <label for="respuesta6">¿cual es el actual jugador con mas balones de oro?</label>
+                            <label for="respuesta6">A- ¿cual es el actual jugador con mas balones de oro?</label>
                             <input  id="respuesta6"  required    name="respuesta6" type="text">
 
-                            <label for="respuesta7">¿Qué selección ganó el Mundial de fútbol de Brasil en el 2014?</label>
+                            <label for="respuesta7">B- ¿Qué selección ganó el Mundial de fútbol de Brasil en el 2014?</label>
                             <input  id="respuesta7"  required name="respuesta7"   type="text">
 
-                            <label for="respuesta8">¿En qué pais nació Valentino Rossi?</label>
+                            <label for="respuesta8">C- ¿En qué pais nació Valentino Rossi?</label>
                             <input  id="respuesta8"  required name="respuesta8"   type="text">
                             
                             <button class="buttonGe" type="submit">listo</button>
@@ -178,13 +181,13 @@
                     <div>
                         <h2>tus preguntas son :</h2>
                         <form id="formArte">
-                            <label  for="respuesta9">¿cual es el nombre del pintor europeo del siglo XIX que es conocido por cortarse la oreja?</label>
+                            <label  for="respuesta9"> A- ¿cual es el nombre del pintor europeo del siglo XIX que es conocido por cortarse la oreja?</label>
                             <input required id="respuesta9"  name="respuesta9"  type="text">
 
-                            <label for="respuesta10">¿Quién es el autor de la Ilíada y la Odisea?</label>
+                            <label for="respuesta10">B- ¿Quién es el autor de la Ilíada y la Odisea?</label>
                             <input required id="respuesta10" name="respuesta10"  type="text">
 
-                            <label for="respuesta11">¿Quién pintó la Capilla Sixtina?</label>
+                            <label for="respuesta11">C- ¿Quién pintó la Capilla Sixtina?</label>
                             <input required id="respuesta11" name="respuesta11" type="text">
                             <button class="buttonGe"   type="submit">listo</button>
                             <button class="btnL" type="button">cambiar de pregunta</button>
@@ -211,6 +214,7 @@
 
 
     </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="index.js"></script>
 </body>
 
