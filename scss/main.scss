@@ -29,7 +29,7 @@ main {
 
                 form {
                     
-
+                    
                     label {
                         font-size: 1.8rem;
                         color: rgb(9, 9, 9);
@@ -175,7 +175,7 @@ main {
         height: 35rem;
         width: 35rem;
         display: grid;
-
+        
         justify-content: center;
 
         column-gap: 5rem;
@@ -184,7 +184,7 @@ main {
         .contenido {
             text-align: center;
             width: 35rem;
-            height: 36rem;
+            height: 38rem;
             border: 3px solid black;
             display: flex;
             background-color: rgba(215, 204, 204, 0.434);
@@ -194,7 +194,7 @@ main {
             justify-content: start;
 
             h2 {
-                margin-top: 1rem;
+                margin: 1rem;
             }
 
             div {
