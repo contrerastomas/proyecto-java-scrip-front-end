@@ -1,9 +1,10 @@
 "use strict";
 
-//proyecto con dom
-/*
-juego de preguntas y respuestas con puntaje y usuarios
-*/
+
+
+
+
+
 //objetos y arrays 
 
 
@@ -72,8 +73,8 @@ let preguntas = [
     id: 9,
     pregunta:
       " A- ¿cual es el nombre del pintor europeo del siglo XIX que es conocido por cortarse la oreja? ",
-    respuesta: "van gogh" ,
-    respuesta2:"vicent van gogh",
+    respuesta: "van gogh",
+    respuesta2: "vicent van gogh",
     estado: false,
   },
   {
@@ -114,7 +115,7 @@ class Usuario {
 
 
 
-//librerias
+//librerias utilizadas
 /*
 
 Toastify
@@ -122,6 +123,33 @@ Toastify
 
 
 */
+
+
+//API
+
+
+function apiAnime() {
+  const key = '9343aba8d5mshcd79b4276e8271ap10dd0fjsn95a8ae9d19dd';
+  const url = 'https://any-anime.p.rapidapi.com/v1/anime/gif/1';
+
+  fetch(url, {
+    method: 'GET',
+    headers: {
+      'x-rapidapi-host': 'any-anime.p.rapidapi.com',
+      'x-rapidapi-key': '9343aba8d5mshcd79b4276e8271ap10dd0fjsn95a8ae9d19dd'
+    }
+  })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      const imageUrl = data.images[0];
+      body.style.backgroundImage = `url(${imageUrl})`
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+
+}
 
 //variables
 
@@ -133,7 +161,8 @@ let color;
 let select = document.getElementById("preguntas");
 let btnP = document.getElementById("btnP");
 let user
-let respuestaCorrecta="Pregunta Respondida"
+let respuestaCorrecta = "Pregunta Respondida"
+const body = document.getElementById("body")
 
 
 
@@ -152,7 +181,7 @@ function cambiarEstado(i) {
 
   preguntas[i].estado = true
 
-  labels[i].textContent=respuestaCorrecta
+  labels[i].textContent = respuestaCorrecta
 
 }
 
@@ -166,7 +195,23 @@ function buscarEstados() {
   return resultado
 
 }
+function mostrarUsuarios() {
 
+  const usuariosStorage = JSON.parse(localStorage.getItem("arrayUsuarios")) || [];
+  usuarios = usuariosStorage
+  usuarios.forEach((e) => {
+
+    const trjs = document.getElementById("trjs")
+    trjs.innerHTML += ` 
+  <td class="td">${e.NombreUsuario}       ||    -     ${e.Score}  - </td>
+  `
+
+  })
+
+
+
+
+}
 
 function agregarNombre(nombre, color) {
 
@@ -232,8 +277,10 @@ function verPuntaje(nombre) {
 }
 
 function guardarUsuario(usuario) {
+
   const usuariosStorage = JSON.parse(localStorage.getItem("arrayUsuarios")) || [];
   const usuarioExistente = usuariosStorage.find((u) => u.NombreUsuario === usuario.NombreUsuario);
+  usuarios = usuariosStorage;
 
   if (!usuarioExistente) {
     usuariosStorage.push(usuario);
@@ -253,6 +300,7 @@ function loadUserData() {
   } else {
     return null;
   }
+
 }
 
 
@@ -271,6 +319,10 @@ let btnGeneral = document.querySelectorAll(".buttonGe");
 let btnL = document.querySelectorAll(".btnL");
 let btnAgr = document.querySelector("#agregar");
 const guardar = document.getElementById("Guardar")
+
+const usuariosSection = document.querySelector("#mostrarUsuarios")
+const listaUsuarios = document.querySelector("#listaUsuarios")
+
 
 //inputs
 
@@ -323,7 +375,7 @@ label11.innerText = preguntas[11].pregunta
 
 let h2 = document.getElementsByTagName("h2");
 let label = document.getElementsByTagName("label");
-let reset = document.getElementById("reset")
+let cambiarFondo = document.getElementById("cambiarFondo")
 let h1 = document.getElementsByTagName("h1");
 // formularios
 
@@ -354,13 +406,13 @@ setTimeout(() => {
   }).showToast();
 }, 1000)
 
-colorInput.addEventListener("mouseover",()=>{
+colorInput.addEventListener("mouseover", () => {
   setTimeout(() => {
 
     Toastify({
       text: "eligue tu color y las letras lo tendran  ",
       duration: 10000,
-  
+
       newWindow: true,
       close: true,
       gravity: "bottom", // `top` or `bottom`
@@ -374,7 +426,7 @@ colorInput.addEventListener("mouseover",()=>{
       onClick: function () { } // Callback after click
     }).showToast();
   }, 1000)
-  
+
 })
 
 
@@ -396,7 +448,7 @@ formularioUsuario.addEventListener("submit", function (e) {
 
     Toastify({
       text: "Bienvenido " + user.NombreUsuario + "  !!\n " + "Eligue el tipo de pregunta que quieres responder 👇",
-      duration: 10000,
+      duration: 2000,
 
       newWindow: true,
       close: true,
@@ -1021,7 +1073,7 @@ select.addEventListener("change", function () {
 
 guardar.onclick = (e) => {
   e.preventDefault()
-
+  guardar.innerHTML = "Usuario Guardado"
   guardarUsuario(user)
 }
 
@@ -1036,7 +1088,7 @@ btnVerPuntos.onclick = (e) => {
       user.Score
       + " y tu color es: " +
       user.color,
-    duration: 3000,
+    duration: 2000,
 
     newWindow: true,
     close: true,
@@ -1055,12 +1107,22 @@ btnVerPuntos.onclick = (e) => {
 
 };
 
-reset.addEventListener("click", function () {
-  localStorage.clear()
+cambiarFondo.addEventListener("click", function () {
+
+  apiAnime()
+
 })
 
+mostrarUsuarios()
 
 
 
-console.log(preguntas[9].estado)
 
+
+
+//usar solo para limpiar el local storage 
+
+/*
+localStorage.clear()
+
+*/

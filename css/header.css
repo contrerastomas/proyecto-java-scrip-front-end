@@ -10,7 +10,7 @@ header nav {
 }
 header nav button {
   border: 1px solid;
-  font-size: 2rem;
+  font-size: 1.7rem;
   padding: 1rem;
   color: black;
   background-color: rgb(166, 186, 36);
@@ -18,19 +18,19 @@ header nav button {
 }
 header nav button:hover {
   transform: scale(1.05);
+  border: 6px solid black;
 }
 header nav h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
   text-transform: capitalize;
   background-color: rgb(166, 186, 36);
-  border: 3px solid black;
   padding: 1rem;
 }
 header nav h1:hover {
   transition: 0.3s;
-  border: 7px solid rgb(166, 186, 36);
-  font-size: 3.4rem;
+  border: 6px solid black;
+  font-size: 2.8rem;
 }
 
 /*# sourceMappingURL=header.css.map */

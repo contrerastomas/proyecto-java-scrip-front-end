@@ -10,14 +10,14 @@
 
 </head>
 
-<body>
+<body id="body">
     <header>
 
         <nav>
-            <button id="verPuntos" type="submit">ver mi puntaje</button>
-            <button id="Guardar" type="submit">guardar puntos</button>
-            <h1>bienvenido a triviaquest</h1>
-            <button type="button" id="reset" href="index.html">Reset</button>
+            <button id="verPuntos" type="submit">Ver Mi Puntaje</button>
+            <button id="Guardar" type="submit">Guardar Puntos</button>
+            <h1>Bienvenido a Triviaquest</h1>
+            <button type="button" id="cambiarFondo" href="index.html">Cambiar Fondo</button>
 
         </nav>
 
@@ -28,6 +28,23 @@
 
 
         <section class="contenedor">
+
+            <section id="mostrarUsuarios">
+
+                <table class="tabla">
+                    <tr class="tr">
+                        <th>Usuarios ||</th>
+                        <th>-Puntaje-</th>
+
+                    </tr>
+                    <tr class="tr" id="trjs">
+                        
+                    </tr>
+                </table>`
+
+            </section>
+
+
 
 
             <section class="datos">
@@ -57,19 +74,19 @@
             <section class="preguntas" id="contenedorP" style="display: block;">
 
 
-                <div >
+                <div>
 
                     <h2 class="cr">elije el tipo de pregunta</h2>
 
-                    <div >
+                    <div>
                         <form action="">
                             <select name="preguntas" id="preguntas">
                                 <option value="">👾👾</option>
-                                <option value="geografia" >geografia</option>
-                                <option value="entretenimiento" >entretenimiento</option>
-                                <option value="deportes" >deportes</option>
-                                <option value="arte" >arte</option>
-                            </select>   
+                                <option value="geografia">geografia</option>
+                                <option value="entretenimiento">entretenimiento</option>
+                                <option value="deportes">deportes</option>
+                                <option value="arte">arte</option>
+                            </select>
                             <button id="btnP" type="button"> listo</button>
 
                         </form>
@@ -85,25 +102,25 @@
 
         </section>
 
-        
+
         <section class="contenedorPreguntas">
 
 
-            <div id="geografia"     class="contenido"    style="display: none;">
+            <div id="geografia" class="contenido" style="display: none;">
 
                 <h2>bienvenido eligiste geografia</h2>
 
                 <div>
                     <h2>tus preguntas son :</h2>
                     <form id="formGeo">
-                        <label  id="l0"   for="respuesta0"></label>
-                        <input class="input"  id="respuesta0" required   name="respuesta0"  type="text">
-                        
-                        <label id="l1"   for="respuesta1"></label>
-                        <input class="input"  id="respuesta1" required   name="respuesta1" type="text">
+                        <label id="l0" for="respuesta0"></label>
+                        <input class="input" id="respuesta0" required name="respuesta0" type="text">
 
-                        <label  id="l2"  for="respuesta2"></label>
-                        <input class="input"  id="respuesta2" required   name="respuesta2" type="text">
+                        <label id="l1" for="respuesta1"></label>
+                        <input class="input" id="respuesta1" required name="respuesta1" type="text">
+
+                        <label id="l2" for="respuesta2"></label>
+                        <input class="input" id="respuesta2" required name="respuesta2" type="text">
                         <button class="buttonGe" type="submit">listo</button>
                         <button class="btnL" type="button">cambiar de pregunta</button>
 
@@ -115,91 +132,91 @@
 
 
 
-                <div  id="entretenimiento"      class="contenido"   style="display: none;">
+            <div id="entretenimiento" class="contenido" style="display: none;">
 
-                    <h2>bienvenido eligiste entretenimiento</h2>
+                <h2>bienvenido eligiste entretenimiento</h2>
 
-                    <div>
-                        <h2>tus preguntas son :</h2>
-                        <form id="formEnt">
-                            <label  id="l3"  for="respuesta3"></label>
-                            <input class="input"  id="respuesta3" required name="respuesta3" type="text">
+                <div>
+                    <h2>tus preguntas son :</h2>
+                    <form id="formEnt">
+                        <label id="l3" for="respuesta3"></label>
+                        <input class="input" id="respuesta3" required name="respuesta3" type="text">
 
-                            <label  id="l4"  for="respuesta4"></label>
-                            <input class="input"  id="respuesta4" required  name="respuesta4" type="text">
+                        <label id="l4" for="respuesta4"></label>
+                        <input class="input" id="respuesta4" required name="respuesta4" type="text">
 
-                            <label  id="l5"  for="respuesta5"></label>
-                            <input class="input" id="respuesta5"required  name="respuesta5" type="text">
+                        <label id="l5" for="respuesta5"></label>
+                        <input class="input" id="respuesta5" required name="respuesta5" type="text">
 
-                            <button class="buttonGe" type="submit">listo</button>
-                            <button class="btnL" type="button">cambiar de pregunta</button>
-
-
-
-
-                        </form>
-                    </div>
+                        <button class="buttonGe" type="submit">listo</button>
+                        <button class="btnL" type="button">cambiar de pregunta</button>
 
 
 
-                </div>
 
-
-                <div  id="deportes"     class="contenido"    style="display: none;">
-
-                    <h2>bienvenido eligiste deportes</h2>
-
-                    <div>
-                        <h2>tus preguntas son :</h2>
-                        <form id="formDep">
-                            <label  id="l6"  for="respuesta6"></label>
-                            <input class="input"  id="respuesta6"  required    name="respuesta6" type="text">
-
-                            <label  id="l7"  for="respuesta7"></label>
-                            <input class="input"  id="respuesta7"  required name="respuesta7"   type="text">
-
-                            <label  id="l8"  for="respuesta8"></label>
-                            <input class="input"  id="respuesta8"  required name="respuesta8"   type="text">
-                            
-                            <button class="buttonGe" type="submit">listo</button>
-                            <button class="btnL" type="button">cambiar de pregunta</button>
-
-
-                        </form>
-                    </div>
-
-
-
+                    </form>
                 </div>
 
 
 
-                <div id="arte"     class="contenido"    style="display: none;">
-
-                    <h2>bienvenido eligiste arte</h2>
-
-                    <div>
-                        <h2>tus preguntas son :</h2>
-                        <form id="formArte">
-                            <label  id="l9"   for="respuesta9"> </label>
-                            <input class="input" required id="respuesta9"  name="respuesta9"  type="text">
-
-                            <label id="l10"   for="respuesta10"></label>
-                            <input class="input" required id="respuesta10" name="respuesta10"  type="text">
-
-                            <label  id="l11"  for="respuesta11"></label>
-                            <input class="input" required id="respuesta11" name="respuesta11" type="text">
-                            <button class="buttonGe"   type="submit">listo</button>
-                            <button class="btnL" type="button">cambiar de pregunta</button>
+            </div>
 
 
+            <div id="deportes" class="contenido" style="display: none;">
 
-                        </form>
-                    </div>
+                <h2>bienvenido eligiste deportes</h2>
+
+                <div>
+                    <h2>tus preguntas son :</h2>
+                    <form id="formDep">
+                        <label id="l6" for="respuesta6"></label>
+                        <input class="input" id="respuesta6" required name="respuesta6" type="text">
+
+                        <label id="l7" for="respuesta7"></label>
+                        <input class="input" id="respuesta7" required name="respuesta7" type="text">
+
+                        <label id="l8" for="respuesta8"></label>
+                        <input class="input" id="respuesta8" required name="respuesta8" type="text">
+
+                        <button class="buttonGe" type="submit">listo</button>
+                        <button class="btnL" type="button">cambiar de pregunta</button>
 
 
-
+                    </form>
                 </div>
+
+
+
+            </div>
+
+
+
+            <div id="arte" class="contenido" style="display: none;">
+
+                <h2>bienvenido eligiste arte</h2>
+
+                <div>
+                    <h2>tus preguntas son :</h2>
+                    <form id="formArte">
+                        <label id="l9" for="respuesta9"> </label>
+                        <input class="input" required id="respuesta9" name="respuesta9" type="text">
+
+                        <label id="l10" for="respuesta10"></label>
+                        <input class="input" required id="respuesta10" name="respuesta10" type="text">
+
+                        <label id="l11" for="respuesta11"></label>
+                        <input class="input" required id="respuesta11" name="respuesta11" type="text">
+                        <button class="buttonGe" type="submit">listo</button>
+                        <button class="btnL" type="button">cambiar de pregunta</button>
+
+
+
+                    </form>
+                </div>
+
+
+
+            </div>
 
 
 
