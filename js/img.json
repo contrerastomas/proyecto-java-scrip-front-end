@@ -2,87 +2,87 @@
     "imagenes":[
         {
             "id":0,
-            "ruta":"assets/img0",
+            "ruta":"../assets/image0.jpg"
         },
         {
             "id":1,
-            "ruta":"url",
+            "ruta":"../assets/image1.jpg"
         },
         {
             "id":2,
-            "ruta":"url",
+            "ruta":"../assets/image2.jpg"
         },
         {
             "id":3,
-            "ruta":"url",
+            "ruta":"../assets/image3.jpg"
         },
         {
             "id":4,
-            "ruta":"url",
+            "ruta":"../assets/image4.jpg"
         },
         {
             "id":5,
-            "ruta":"url",
+            "ruta":"../assets/image5.jpg"
         },
         {
             "id":6,
-            "ruta":"url",
+            "ruta":"../assets/image6.jpg"
         },
         {
             "id":7,
-            "ruta":"url",
+            "ruta":"../assets/image7.jpg"
         },
         {
             "id":8,
-            "ruta":"url",
+            "ruta":"../assets/image8.jpg"
         },
         {
             "id":9,
-            "ruta":"url",
+            "ruta":"../assets/image9.jpg"
         },
         {
             "id":10,
-            "ruta":"url",
+            "ruta":"../assets/image10.jpg"
         },
         {
             "id":11,
-            "ruta":"url",
+            "ruta":"../assets/image11.jpg"
         },
         {
             "id":12,
-            "ruta":"url",
+            "ruta":"../assets/image12.jpg"
         },
         {
             "id":13,
-            "ruta":"url",
+            "ruta":"../assets/image13.jpg"
         },
         {
             "id":14,
-            "ruta":"url",
+            "ruta":"../assets/image14.jpg"
         },
         {
             "id":15,
-            "ruta":"url",
+            "ruta":"../assets/image15.jpg"
         },
         {
             "id":16,
-            "ruta":"url",
+            "ruta":"../assets/image16.jpg"
         },
         {
             "id":17,
-            "ruta":"url",
+            "ruta":"../assets/image17.jpg"
         },
         {
             "id":18,
-            "ruta":"url",
+            "ruta":"../assets/image18.jpg"
         },
         {
             "id":19,
-            "ruta":"url",
+            "ruta":"../assets/image19.jpg"
         },
         {
             "id":20,
-            "ruta":"url",
+            "ruta":"../assets/image20.jpg"
         }
 
 

@@ -125,40 +125,8 @@ Toastify
 */
 
 
-//API
-
-
-
-
-
-function apiAnime() {
-
-
-
-  const key = '9343aba8d5mshcd79b4276e8271ap10dd0fjsn95a8ae9d19dd';
-  const url = 'https://any-anime.p.rapidapi.com/v1/anime/png/1';
-
-  fetch(url, {
-    method: 'GET',
-    headers: {
-      'x-rapidapi-host': 'any-anime.p.rapidapi.com',
-      'x-rapidapi-key': key
-    }
-  })
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
-      const imageUrl = data.images[0];
-      body.style.backgroundImage = `url(${imageUrl})`
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
-
-}
-
 //variables
-
+let contador=0;
 let usuarioIngresado = document.getElementById("usuario");
 let formulario = document.getElementById("formulario");
 let nombre;
@@ -315,6 +283,26 @@ function cambiarColor(vairableColor) {
     vairableColor[i].style.color = agregarColor();
   }
 }
+
+
+
+//API
+function apiAnimeFondo(){
+
+
+  fetch("./js/img.json")
+  .then(Response=>Response.json())
+  .then(data=>{
+
+      const ruta= data.imagenes[contador].ruta
+        body.style.backgroundImage = `url(${ruta})`
+  
+  })
+  .catch(error=>console.error("error"+ error))
+  
+
+}
+
 
 
 
@@ -1114,8 +1102,9 @@ btnVerPuntos.onclick = (e) => {
 };
 
 cambiarFondo.addEventListener("click", function () {
+contador+=1
 
-  apiAnime()
+apiAnimeFondo()
 
 })
 
