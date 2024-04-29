@@ -128,15 +128,21 @@ Toastify
 //API
 
 
+
+
+
 function apiAnime() {
+
+
+
   const key = '9343aba8d5mshcd79b4276e8271ap10dd0fjsn95a8ae9d19dd';
-  const url = 'https://any-anime.p.rapidapi.com/v1/anime/gif/1';
+  const url = 'https://any-anime.p.rapidapi.com/v1/anime/png/1';
 
   fetch(url, {
     method: 'GET',
     headers: {
       'x-rapidapi-host': 'any-anime.p.rapidapi.com',
-      'x-rapidapi-key': '9343aba8d5mshcd79b4276e8271ap10dd0fjsn95a8ae9d19dd'
+      'x-rapidapi-key': key
     }
   })
     .then(response => response.json())

@@ -1,40 +1,40 @@
 header {
 
     height: 5rem;
+    width: 100%;
 
     nav {
         display: flex;
         flex-direction: row-reverse;
         justify-content: center;
-        gap: 5rem;
-        margin-top: 3rem ;
+        gap: 3rem;
+        margin-top: 3rem;
         button{
             border: 1px solid;
-            font-size: 1.7rem;
+            font-size: 2rem;
             padding: 1rem;
+            height: max-content;
             color: black;
             background-color: rgb(166, 186, 36);
             cursor: pointer;
             &:hover{
                 transform: scale(1.05);
-                border: 6px solid black;
-
             }
         }
         
         h1 {
-            font-size: 2.5rem;
+            font-size:2.3rem;
             text-align: center;
             text-transform: capitalize;
             background-color: rgb(166, 186, 36);
+            border: 3px solid black;
+            height: max-content;
             padding: 1rem;
 
             &:hover{
                 transition: 0.3s;
-                border: 6px solid black;
-
+                border: 1px solid  rgb(166, 186, 36);
                 
-            font-size: 2.8rem;
 
             }
         }

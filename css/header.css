@@ -1,36 +1,38 @@
 header {
   height: 5rem;
+  width: 100%;
 }
 header nav {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
-  gap: 5rem;
+  gap: 3rem;
   margin-top: 3rem;
 }
 header nav button {
   border: 1px solid;
-  font-size: 1.7rem;
+  font-size: 2rem;
   padding: 1rem;
+  height: max-content;
   color: black;
   background-color: rgb(166, 186, 36);
   cursor: pointer;
 }
 header nav button:hover {
   transform: scale(1.05);
-  border: 6px solid black;
 }
 header nav h1 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   text-align: center;
   text-transform: capitalize;
   background-color: rgb(166, 186, 36);
+  border: 3px solid black;
+  height: max-content;
   padding: 1rem;
 }
 header nav h1:hover {
   transition: 0.3s;
-  border: 6px solid black;
-  font-size: 2.8rem;
+  border: 1px solid rgb(166, 186, 36);
 }
 
 /*# sourceMappingURL=header.css.map */

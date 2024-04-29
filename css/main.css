@@ -4,7 +4,7 @@ main {
   align-items: center;
   flex-direction: row;
   gap: 3rem;
-  margin-top: 6rem;
+  margin-top: 2rem;
   justify-content: center;
   height: max-content;
 }
