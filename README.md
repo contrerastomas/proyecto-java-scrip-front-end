@@ -2,7 +2,7 @@
 
 ##### `Dev - Tomas Contreras`
 
-<img src="[https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/React-Dark.svg](https://github.com/tandpfun/skill-icons/blob/main/icons/JavaScript.svg)" width="50">
+<img src="https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/JavaScript.svg" width="50">
 
 ## Sobre mi proyecto
 Este proyecto es un juego de preguntas con un sistema de puntaje y guardado de puntos y nombre.
